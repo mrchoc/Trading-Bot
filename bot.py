@@ -1,3 +1,6 @@
+
+#This script does not include the real-time buying and selling of stocks
+
 from alpha_vantage.timeseries import TimeSeries
 from alpha_vantage.techindicators import TechIndicators
 import matplotlib.pyplot as plt
@@ -8,11 +11,6 @@ ts = TimeSeries(key='4NIIGXQ179RD4W12', output_format='pandas')
 ti = TechIndicators(key='4NIIGXQ179RD4W12', output_format='pandas')
 
 ticker = 'IBM'
-
-
-
-
-
 
 
 macd, macd_data = ti.get_macd(ticker, '1min')
